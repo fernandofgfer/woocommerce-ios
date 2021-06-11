@@ -94,6 +94,7 @@ extension ReviewsViewModel {
     func synchronizeReviews(pageNumber: Int = Settings.firstPage,
                             pageSize: Int = Settings.pageSize,
                             onCompletion: (() -> Void)? = nil) {
+        hasErrorLoadingData = false
         let group = DispatchGroup()
 
         group.enter()
